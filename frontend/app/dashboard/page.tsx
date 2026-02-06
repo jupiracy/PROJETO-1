@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import api from "@/lib/axios";
 import Link from "next/link";
+import LanguageSelector from "@/components/LanguageSelector";
 
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -42,13 +43,14 @@ export default function DashboardPage() {
                 <div className="flex items-center gap-4">
                     <Card className="bg-primary text-primary-foreground">
                         <CardContent className="p-4">
-                            <span className="font-bold text-xl">{wallet?.current_balance || 0} PTS</span>
+                            <span className="font-bold text-xl">{wallet?.current_balance || 0} {t("common.pts")}</span>
                         </CardContent>
                     </Card>
 
                     <Button asChild variant="outline">
                         <Link href="/store">{t("dashboard.visit_store")}</Link>
                     </Button>
+                    <LanguageSelector />
                 </div>
             </div>
 
@@ -58,7 +60,7 @@ export default function DashboardPage() {
                         <CardTitle>{t("dashboard.my_progress")}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>{t("dashboard.level")}: {user.student_profile?.current_level_name || 'Beginner'}</p>
+                        <p>{t("dashboard.level")}: {user.student_profile?.current_level_name || t("dashboard.beginner")}</p>
                         {/* Progress Bar Here */}
                     </CardContent>
                 </Card>

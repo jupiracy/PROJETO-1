@@ -16,13 +16,15 @@
     },
     "common": {
         "change_language": "Alterar Idioma",
-        "loading": "Carregando..."
+        "loading": "Carregando...",
+        "pts": "PTS"
     },
     "dashboard": {
         "welcome": "Bem-vindo",
         "visit_store": "Visitar Loja",
         "my_progress": "Meu Progresso",
         "level": "Nível",
+        "beginner": "Iniciante",
         "courses": "Cursos",
         "continue_learning": "Continuar Aprendendo"
     }

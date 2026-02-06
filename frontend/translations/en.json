@@ -16,13 +16,15 @@
     },
     "common": {
         "change_language": "Change Language",
-        "loading": "Loading..."
+        "loading": "Loading...",
+        "pts": "PTS"
     },
     "dashboard": {
         "welcome": "Welcome",
         "visit_store": "Visit Store",
         "my_progress": "My Progress",
         "level": "Level",
+        "beginner": "Beginner",
         "courses": "Courses",
         "continue_learning": "Continue Learning"
     }

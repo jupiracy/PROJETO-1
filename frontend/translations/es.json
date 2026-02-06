@@ -6,7 +6,7 @@
         "start_now": "Empezar Ahora",
         "login": "Iniciar Sesión",
         "features": {
-            "learning_title": "Aprendizaje Estructurado",
+            "learning_title": "Aprendizaje Estruturado",
             "learning_desc": "Cursos paso a paso, desde principiante hasta profesional.",
             "progress_title": "Progreso Gamificado",
             "progress_desc": "Gana puntos por cada tarea y lección.",
@@ -16,13 +16,15 @@
     },
     "common": {
         "change_language": "Cambiar Idioma",
-        "loading": "Cargando..."
+        "loading": "Cargando...",
+        "pts": "PTS"
     },
     "dashboard": {
         "welcome": "Bienvenido",
         "visit_store": "Visitar Tienda",
         "my_progress": "Mi Progreso",
         "level": "Nivel",
+        "beginner": "Principiante",
         "courses": "Cursos",
         "continue_learning": "Continuar Aprendiendo"
     }
