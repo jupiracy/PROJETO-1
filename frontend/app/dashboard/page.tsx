@@ -60,7 +60,15 @@ export default function DashboardPage() {
                         <CardTitle>{t("dashboard.my_progress")}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p>{t("dashboard.level")}: {user.student_profile?.current_level_name || t("dashboard.beginner")}</p>
+                        <p>
+                            {t("dashboard.level")}: {
+                                user.student_profile?.current_level_name
+                                    ? (t(`db.${user.student_profile.current_level_name}`).startsWith("db.")
+                                        ? user.student_profile.current_level_name
+                                        : t(`db.${user.student_profile.current_level_name}`))
+                                    : t("dashboard.beginner")
+                            }
+                        </p>
                         {/* Progress Bar Here */}
                     </CardContent>
                 </Card>

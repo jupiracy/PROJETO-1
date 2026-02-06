@@ -27,5 +27,12 @@
         "beginner": "Principiante",
         "courses": "Cursos",
         "continue_learning": "Continuar Aprendiendo"
+    },
+    "db": {
+        "Beginner": "Principiante",
+        "Intermediate": "Intermedio",
+        "Advanced": "Avanzado",
+        "Pro": "Profesional",
+        "Master": "Maestro"
     }
 }

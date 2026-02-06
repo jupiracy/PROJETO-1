@@ -27,5 +27,12 @@
         "beginner": "Beginner",
         "courses": "Courses",
         "continue_learning": "Continue Learning"
+    },
+    "db": {
+        "Beginner": "Beginner",
+        "Intermediate": "Intermediate",
+        "Advanced": "Advanced",
+        "Pro": "Pro",
+        "Master": "Master"
     }
 }
