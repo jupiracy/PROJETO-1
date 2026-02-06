@@ -1,0 +1,10 @@
+Django>=5.0,<6.0
+djangorestframework
+psycopg2-binary
+django-cors-headers
+drf-spectacular
+PyJWT
+python-dotenv
+Pillow
+dj-database-url
+djangorestframework-simplejwt
