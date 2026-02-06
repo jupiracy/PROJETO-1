@@ -1,8 +1,10 @@
 from django.db import models
+import uuid
 from django.conf import settings
 from courses.models import Task, Lesson, Course
 
 class PointsWallet(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='wallet')
     current_balance = models.PositiveIntegerField(default=0)
     total_earned = models.PositiveIntegerField(default=0)
@@ -11,6 +13,7 @@ class PointsWallet(models.Model):
         return f"Wallet of {self.user.username}"
 
 class PointsTransaction(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     TRANSACTION_TYPES = (
         ('EARN', 'Earned'),
         ('SPEND', 'Spent'),
@@ -23,6 +26,7 @@ class PointsTransaction(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
 class Enrollment(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='enrollments')
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     enrolled_at = models.DateTimeField(auto_now_add=True)
@@ -33,6 +37,7 @@ class Enrollment(models.Model):
         unique_together = ('user', 'course')
 
 class StudentLessonProgress(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     is_completed = models.BooleanField(default=False)
@@ -42,6 +47,7 @@ class StudentLessonProgress(models.Model):
         unique_together = ('user', 'lesson')
 
 class StudentTaskCompletion(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     completed_at = models.DateTimeField(auto_now_add=True)

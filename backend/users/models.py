@@ -1,12 +1,15 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+import uuid
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 class User(AbstractUser):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     pass
 
 class StudentProfile(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='student_profile')
     bio = models.TextField(blank=True)
     # Level will be handled by logic or FK to courses.Level, keeping it simple here for now

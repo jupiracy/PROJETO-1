@@ -1,6 +1,8 @@
 from django.db import models
+import uuid
 
 class Level(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     name = models.CharField(max_length=50) # e.g. Beginner, Advanced
     description = models.TextField(blank=True)
     order = models.PositiveIntegerField(default=0)
@@ -12,6 +14,7 @@ class Level(models.Model):
         return self.name
 
 class Course(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     level = models.ForeignKey(Level, on_delete=models.CASCADE, related_name='courses')
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
@@ -27,6 +30,7 @@ class Course(models.Model):
         return self.title
 
 class Module(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name='modules')
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
@@ -39,6 +43,7 @@ class Module(models.Model):
         return f"{self.course.title} - {self.title}"
 
 class Lesson(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     module = models.ForeignKey(Module, on_delete=models.CASCADE, related_name='lessons')
     title = models.CharField(max_length=200)
     video_url = models.URLField(blank=True)
@@ -52,6 +57,7 @@ class Lesson(models.Model):
         return self.title
 
 class Task(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     TASK_TYPES = (
         ('QUIZ', 'Quiz'),
         ('PRACTICE', 'Practice Submission'),
