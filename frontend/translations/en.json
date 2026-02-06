@@ -1,0 +1,29 @@
+{
+    "home": {
+        "title_part1": "Master the",
+        "title_part2": "Drums",
+        "subtitle": "Join the ultimate drumming school. Learn from beginners to advanced levels, complete tasks, earn points, and redeem exclusive gear.",
+        "start_now": "Start Now",
+        "login": "Login",
+        "features": {
+            "learning_title": "Structured Learning",
+            "learning_desc": "Step-by-step courses from beginner to pro.",
+            "progress_title": "Gamified Progress",
+            "progress_desc": "Earn points for every task and lesson.",
+            "store_title": "Rewards Store",
+            "store_desc": "Redeem your hard-earned points for gear."
+        }
+    },
+    "common": {
+        "change_language": "Change Language",
+        "loading": "Loading..."
+    },
+    "dashboard": {
+        "welcome": "Welcome",
+        "visit_store": "Visit Store",
+        "my_progress": "My Progress",
+        "level": "Level",
+        "courses": "Courses",
+        "continue_learning": "Continue Learning"
+    }
+}

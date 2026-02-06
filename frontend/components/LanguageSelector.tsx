@@ -3,22 +3,21 @@
 import { useState } from "react";
 import { Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function LanguageSelector() {
     const [isOpen, setIsOpen] = useState(false);
-    const [selectedLang, setSelectedLang] = useState("EN");
+    const { language, setLanguage, t } = useLanguage();
 
     const languages = [
-        { code: "EN", label: "English", flag: "🇺🇸" },
-        { code: "PT", label: "Português", flag: "🇧🇷" },
-        { code: "ES", label: "Español", flag: "🇪🇸" },
+        { code: "EN" as const, label: "English", flag: "🇺🇸" },
+        { code: "PT" as const, label: "Português", flag: "🇧🇷" },
+        { code: "ES" as const, label: "Español", flag: "🇪🇸" },
     ];
 
-    const handleSelect = (langCode: string) => {
-        setSelectedLang(langCode);
+    const handleSelect = (langCode: "EN" | "PT" | "ES") => {
+        setLanguage(langCode);
         setIsOpen(false);
-        console.log(`Language switched to: ${langCode}`);
-        // Here you would trigger the actual language change logic
     };
 
     return (
@@ -40,7 +39,7 @@ export default function LanguageSelector() {
                             <button
                                 key={lang.code}
                                 onClick={() => handleSelect(lang.code)}
-                                className={`w-full text-left px-4 py-2 text-sm flex items-center gap-2 hover:bg-accent hover:text-accent-foreground transition-colors ${selectedLang === lang.code ? "bg-accent/50 font-medium" : ""
+                                className={`w-full text-left px-4 py-2 text-sm flex items-center gap-2 hover:bg-accent hover:text-accent-foreground transition-colors ${language === lang.code ? "bg-accent/50 font-medium" : ""
                                     }`}
                             >
                                 <span className="text-base">{lang.flag}</span>

@@ -1,0 +1,29 @@
+{
+    "home": {
+        "title_part1": "Domine a",
+        "title_part2": "Bateria",
+        "subtitle": "Junte-se à melhor escola de bateria. Aprenda do iniciante ao avançado, complete tarefas, ganhe pontos e resgate equipamentos exclusivos.",
+        "start_now": "Começar Agora",
+        "login": "Entrar",
+        "features": {
+            "learning_title": "Aprendizado Estruturado",
+            "learning_desc": "Cursos passo a passo, do iniciante ao profissional.",
+            "progress_title": "Progresso Gamificado",
+            "progress_desc": "Ganhe pontos por cada tarefa e lição.",
+            "store_title": "Loja de Prêmios",
+            "store_desc": "Troque seus pontos suados por equipamentos."
+        }
+    },
+    "common": {
+        "change_language": "Alterar Idioma",
+        "loading": "Carregando..."
+    },
+    "dashboard": {
+        "welcome": "Bem-vindo",
+        "visit_store": "Visitar Loja",
+        "my_progress": "Meu Progresso",
+        "level": "Nível",
+        "courses": "Cursos",
+        "continue_learning": "Continuar Aprendendo"
+    }
+}
