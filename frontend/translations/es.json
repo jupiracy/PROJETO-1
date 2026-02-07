@@ -34,5 +34,25 @@
         "Advanced": "Avanzado",
         "Pro": "Profesional",
         "Master": "Maestro"
+    },
+    "admin": {
+        "menu": {
+            "estudiantes": "Estudiantes",
+            "cursos": "Cursos",
+            "productos": "Productos",
+            "mensajes": "Mensajes",
+            "estadisticas": "Estadísticas",
+            "toggle_sidebar": "Alternar Sidebar"
+        },
+        "header": {
+            "notifications": "Notificaciones"
+        },
+        "titles": {
+            "estudiantes": "Gestión de Estudiantes",
+            "cursos": "Gestión de Cursos",
+            "productos": "Inventario de Productos",
+            "mensajes": "Centro de Comunicación",
+            "estadisticas": "Análisis de Desempeño"
+        }
     }
 }
